@@ -1,0 +1,53 @@
+body {
+  padding-top: 60px;
+}
+
+.mainmenu {
+  position: fixed;top: 0;left:0;right:0;height: 50px;border-bottom: 1px solid rgba(0,0,0,0.15);padding:0;
+}
+.mainmenu ul {list-style: none;float: left;padding: 0;}
+.mainmenu ul li{width:auto;display: inline;float:left;padding:0 15px;line-height: 50px;height:50px;cursor: pointer;border-right: 1px solid rgba(0,0,0,0.15)}
+.mainmenu ul li a , .mainmenu ul li a:hover , .mainmenu ul li i{font-size: 25px;line-height: 50px;text-decoration: none;color:#555}
+
+.mainmenu ul.right { float: right;padding: 0;}
+.mainmenu ul.right li{ float: right;border-left: 1px solid rgba(0,0,0,0.15);border-right: none}
+
+
+
+
+
+
+
+
+
+
+
+/*SETTINGS*/
+.bord  {border:1px solid rgba(0,0,0,0.2);height:auto;height: 80vh;overflow-y: auto;padding:0;}
+
+.settingsWell {height:20px;display: block;width:100%;margin:0 auto;background: #FFD54F;transform: translateZ(45deg);
+transition: all 0.8s ease;overflow: hidden;margin: 0;
+}
+.settingsWell .inner {pointer-events: none;opacity: 0;transition: all 0.8s ease;padding:150px;}
+.settingsWell.activeTab {height:auto;height: 70vh;margin:0 ;background: #FFF8E1}
+
+.settingsWell.activeTab .inner {pointer-events: auto;opacity: 1;padding:15px;}
+.settingsWell h1 {color:#FF6F00;text-align: center;}
+
+
+table.settingsTable {width:100%;}
+table.settingsTable tr td {padding: 5px;width:50%}
+table.settingsTable form-control {height: 20px;padding-top:3px;padding-bottom:3px}
+
+.settingsUl {
+list-style: none;
+margin: 0;padding:0;
+}
+.settingsUl li {
+  float: left;
+  padding: 15px;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
