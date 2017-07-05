@@ -18,9 +18,11 @@
 <div class="row">
 <div class="col-sm-4 bord" style='padding:0'>
   <ul class="settingsUl">
-  <li onclick="loadTab(0)">GENERAL</li>
-  <li onclick="loadTab(1)">AFFICHAGE</li>
-  <li onclick="loadTab(2)">EXTRA</li>
+  <li onclick="loadTab(0,this)">GENERAL</li>
+  <li onclick="loadTab(1,this)">AFFICHAGE</li>
+  <li onclick="loadTab(2,this)">EXTRA</li>
+  <li onclick="loadTab(3,this)">COMPTES</li>
+  <li onclick="loadTab(4,this)">FREUENCY</li>
   </ul>
 </div>
 <div class="col-sm-8 bord" style="border-left:none">
@@ -30,7 +32,7 @@
 <table class="settingsTable">
 <tr>
   <td>KEY</td>
-  <td><input type="text" class="form-control" name="val" value=""></td>
+  <td><input type="text" class="form-control" name="val" value="" onkeyup="save(this)"></td>
 </tr>
 </table>
 
@@ -38,13 +40,27 @@
 </div>
 <div class="settingsWell" data-tab="1">
   <div class="inner">
-    <h1>AFFICHAGE TAB</h1>
+    <h1>AFFICHAGE </h1>
 
   </div>
 </div>
 <div class="settingsWell" data-tab="2">
   <div class="inner">
-    <h1>EXTRA TAB</h1>
+    <h1>EXTRA </h1>
+
+  </div>
+</div>
+
+<div class="settingsWell" data-tab="3">
+  <div class="inner">
+    <h1>COMPTES </h1>
+
+  </div>
+</div>
+
+<div class="settingsWell" data-tab="4">
+  <div class="inner">
+    <h1>FREQUENCY </h1>
 
   </div>
 </div>

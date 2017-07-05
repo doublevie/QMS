@@ -1,5 +1,6 @@
 <div class="mainmenu">
 <ul>
+<li><a href="main.php">QMS SERVER</li>
 <li><a href="main.php"><i class="fa fa-home"></i></a></li>
 <li> <i class="fa fa-address-book"> </i></li>
 <li><a href="#"><i class="fa fa-plus"></i></a></li>
