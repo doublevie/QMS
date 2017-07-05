@@ -8,15 +8,29 @@ function loadTab(x,el) {
 }
 
 window.onload = function(){
+  loadSettings();
   loadTab(0);
-// document.body.style.opacity = 1;
+
 }
 
 
 
 function save(el) {
 var key = el.name , val = el.value;
-console.log('key '+key+'; value='+val);
+frequency.post('conf/save.php','key='+key+'&val='+val,function(z){
+  if (z !== '1') alert('z');
+  console.log(z+' '+key) ;
+});
 
+}
 
+function loadSettings(){
+  frequency.getJSON('conf/json.php',function(e){
+console.log(e);
+_('[name="NOM_SOCIETE"]').value = e.NOM_SOCIETE;
+_('[name="ADRESSE_SOCIETE"]').value = e.ADRESSE_SOCIETE;
+_('[name="TEL_SOCIETE"]').value = e.TEL_SOCIETE;
+_('[name="DISPLAYTYPE"]').value = e.DISPLAYTYPE;
+
+  });
 }

@@ -18,11 +18,11 @@
 <div class="row">
 <div class="col-sm-4 bord" style='padding:0'>
   <ul class="settingsUl">
-  <li onclick="loadTab(0,this)">GENERAL</li>
-  <li onclick="loadTab(1,this)">AFFICHAGE</li>
-  <li onclick="loadTab(2,this)">EXTRA</li>
-  <li onclick="loadTab(3,this)">COMPTES</li>
-  <li onclick="loadTab(4,this)">FREUENCY</li>
+  <li onclick="loadTab(0,this)"><i class="fa fa-cog"></i> GENERAL</li>
+  <li onclick="loadTab(1,this)"><i class="fa fa-desktop"></i> AFFICHAGE</li>
+  <li onclick="loadTab(2,this)"><i class="fa fa-puzzle-piece"></i> EXTRA</li>
+  <li onclick="loadTab(3,this)"><i class="fa fa-user"></i> COMPTES</li>
+  <li onclick="loadTab(4,this)"><i class="fa fa-cog"></i> FREUENCY</li>
   </ul>
 </div>
 <div class="col-sm-8 bord" style="border-left:none">
@@ -31,9 +31,21 @@
 <h1>GENERAL</h1>
 <table class="settingsTable">
 <tr>
-  <td>KEY</td>
-  <td><input type="text" class="form-control" name="val" value="" onkeyup="save(this)"></td>
+  <td>SOCIETE</td>
+  <td><input type="text" class="form-control" name="NOM_SOCIETE" value="" onkeyup="save(this)"></td>
 </tr>
+
+<tr>
+  <td>ADRESSE</td>
+  <td><input type="text" class="form-control" name="ADRESSE_SOCIETE" value="" onkeyup="save(this)"></td>
+</tr>
+
+<tr>
+  <td>TEL</td>
+  <td><input type="text" class="form-control" name="TEL_SOCIETE" value="" onkeyup="save(this)"></td>
+</tr>
+
+
 </table>
 
   </div>
@@ -41,6 +53,23 @@
 <div class="settingsWell" data-tab="1">
   <div class="inner">
     <h1>AFFICHAGE </h1>
+
+
+    <table class="settingsTable">
+      <tr>
+        <td>TYPE D'AFFICHEGE</td>
+        <td>
+<select class="form-control" name="DISPLAYTYPE"  onchange="save(this)">
+<option value="V">Affichege vertical</option>
+<option value="H">Affichege horizontal</option>
+</select>
+        </td>
+      </tr>
+
+
+
+
+</table>
 
   </div>
 </div>
@@ -77,10 +106,7 @@
 
 
 
-<script type="text/javascript">
-window.setTimeout(function(){
-  window.location.reload();
-},18000)
-</script>
+
+
   </body>
 </html>

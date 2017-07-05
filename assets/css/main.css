@@ -35,6 +35,13 @@ transition: all 0.8s ease;overflow: hidden;margin: 0;
 .settingsWell h1 {color:#FF6F00;text-align: center;}
 
 
+table.settingsTable .form-control:focus {
+  border-color: #FFCA28;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px rgba(255,202,40, .2);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px rgba(255,202,40, .2);
+}
+
 table.settingsTable {width:80%;margin:0 auto;}
 table.settingsTable tr td {padding: 5px;width:50%}
 table.settingsTable form-control {height: 20px;padding-top:3px;padding-bottom:3px}
@@ -51,4 +58,4 @@ margin: 0;padding:0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-.settingsUl li.currentLi , .settingsUl li:hover {background: rgba(0,0,0,0.04)}
+.settingsUl li.currentLi , .settingsUl li:hover {background: rgba(0,0,0,0.04);color:#FF6F00}
