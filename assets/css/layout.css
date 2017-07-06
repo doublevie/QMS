@@ -1,0 +1,37 @@
+body {
+  overflow: hidden;
+  padding: 0;
+}
+
+.topInfos {
+  position: fixed;top:0;left:0;right:0;
+  height:12vh;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+margin:0}
+
+.soc {font-size: 5vh;line-height: 8vh;text-align: center;
+border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.topextra {line-height: 4vh;font-size: 2vh}
+
+
+.media {
+  position: fixed;top:12vh;left:0;right:0;
+  height:73vh;background: #111111;margin:0;
+}
+
+
+.bottomInfos {
+  position: fixed;bottom:0;left:0;right:0;
+  height:15vh;
+  border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+
+
+
+
+body[amber] .topInfos {background: #FFF9C4;border-bottom-color:#FFEE58 ;color:#FF6F00 }
+body[amber] .soc {border-bottom-color:#FFEE58  }
+body[amber] .topInfos .soc{}
+body[amber] .topInfos .topextra{background: #FFF59D;color:#555}

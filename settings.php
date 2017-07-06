@@ -45,6 +45,11 @@
   <td><input type="text" class="form-control" name="TEL_SOCIETE" value="" onkeyup="save(this)"></td>
 </tr>
 
+<tr>
+  <td>NOMBRE DES GUICHETS</td>
+  <td><input type="number" class="form-control" name="NOMBRE_GUICHETS" value="" onkeyup="save(this)"></td>
+</tr>
+
 
 </table>
 

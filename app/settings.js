@@ -31,6 +31,7 @@ _('[name="NOM_SOCIETE"]').value = e.NOM_SOCIETE;
 _('[name="ADRESSE_SOCIETE"]').value = e.ADRESSE_SOCIETE;
 _('[name="TEL_SOCIETE"]').value = e.TEL_SOCIETE;
 _('[name="DISPLAYTYPE"]').value = e.DISPLAYTYPE;
+_('[name="NOMBRE_GUICHETS"]').value = e.NOMBRE_GUICHETS;
 
   });
 }
