@@ -59,3 +59,32 @@ margin: 0;padding:0;
   cursor: pointer;
 }
 .settingsUl li.currentLi , .settingsUl li:hover {background: rgba(0,0,0,0.04);color:#FF6F00}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body[amber] {background:#FFF8E1 }
+body[amber] .container{background:#FFF }
+
+body[amber] .mainmenu{background:#FFECB3/*100*/ }
