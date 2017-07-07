@@ -20,6 +20,35 @@ border-bottom: 1px solid rgba(0,0,0,0.2);
   height:73vh;background: #111111;margin:0;
 }
 
+.media video {
+  width:100vw;
+  opacity: 0;pointer-events: none;
+  height:0;
+}
+
+.media img {
+  width:100vw;height:0;
+  opacity: 0;pointer-events: none;
+
+}
+
+.media img.show , .media video.show {
+  opacity: 1;pointer-events: auto;
+  height:auto;z-index: 5;
+}
+
+.smallNumber {background: #fff;z-index: 9}
+.showNumber {
+position: fixed;top:20vh;left:5vw;right:5vw;height:50vh;opacity: 0;
+}
+
+
+.showNumber.show {height:50vh;opacity: 1;background: #fff;z-index: 9;
+text-align: center;line-height: 19vh;font-size: 16vh;text-align: center;}
+
+.showNumber.show small {font-size: 5vh;line-height: 6vh;display: block}
+
+
 
 .bottomInfos {
   position: fixed;bottom:0;left:0;right:0;

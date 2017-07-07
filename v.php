@@ -38,11 +38,19 @@ VENDREDI 15 JUIN 2017
 
 
 <div class="media">
+<video src=""  >
 
+</video>
+
+<img src="ad/ad1.png" class="main" alt="">
 </div>
 
 
 
+
+<div class="showNumber ">
+
+</div>
 
 
 
@@ -55,13 +63,19 @@ VENDREDI 15 JUIN 2017
 
 
 <div class="bottomInfos">
-
+<div class="row">
+<div class="col-md-5 smallNumber">
+<h1 number>NUMERO 1</h1>
+<h3 guch>NUMERO 1</h3>
+</div>
+</div>
 </div>
 
 
 
   </body>
   <script type="text/javascript" src="assets/js/frequency.min.js"></script>
+  <script type="text/javascript" src="assets/js/ramjet.js"></script>
   <script type="text/javascript" src="app/qms.js"></script>
   <script type="text/javascript">
 qms.clock('.clock');
