@@ -64,13 +64,16 @@ VENDREDI 15 JUIN 2017
 
 <div class="bottomInfos">
 <div class="row">
-<div class="col-md-5 smallNumber">
-<h1 number>NUMERO 1</h1>
-<h3 guch>NUMERO 1</h3>
-</div>
-</div>
-</div>
+<div class="col-xs-5 smallNumber">
 
+
+</div>
+<div class="col-xs-7 ">
+
+
+</div>
+</div>
+</div>
 
 
   </body>

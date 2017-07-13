@@ -58,11 +58,12 @@ qms.initAd()
 
  showNumber : function(n,g) {
    if (qms.ads[qms.current].type == 'video') qms.muteVideo();
-   _('[number]').innerHTML = n;
-   _('[guch]').innerHTML = g;
+  //  _('[number]').innerHTML = n;
+  //  _('[guch]').innerHTML = g;
    var a = _('.smallNumber') , b =  _('.showNumber');
    b.innerHTML = '<small>NUMERO </small>'+n +'<small>GUICHET </small>'+g ;
-call.src = 'call/00'+n+'.ogg';
+   a.innerHTML = '<small>NUMERO </small>'+n +'<small>GUICHET </small>'+g ;
+call.src = 'call/'+n+'.ogg';
 call.load();
 call.play();
 
@@ -76,10 +77,11 @@ call.play();
 
 window.setTimeout(function(){
    if (qms.ads[qms.current].type == 'video') qms.repriseMutedVideo();
+   b.classList.remove('show');
    ramjet.transform( b, a, {
   done: function () {
-    b.classList.remove('show');
      // this function is called as soon as the transition completes
+     b.classList.remove('show');
   }
 });
 
