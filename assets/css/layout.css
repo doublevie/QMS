@@ -49,10 +49,15 @@ h1[number] {text-align: center;}
 .showNumber.show {height:50vh;opacity: 1;background: #fff;z-index: 9;
 text-align: center;line-height: 19vh;font-size: 16vh;text-align: center;}
 
+.showNumber .numberOnly {line-height: 38vh;font-size: 32vh;}
+
 .showNumber.show small {font-size: 5vh;line-height: 6vh;display: block}
+.showNumber .numberOnly small {font-size: 10vh;line-height: 12vh;display: block}
 
 .smallNumber {line-height: 5vh;font-size: 3vh;text-align: center;}
+.smallNumber .numberOnly {line-height: 10vh;font-size: 6vh;text-align: center;}
 .smallNumber small {font-size: 2vh;line-height: 3vh;display: block}
+.smallNumber .numberOnly  small {font-size: 4vh;line-height: 6vh;display: block}
 
 
 .bottomInfos {

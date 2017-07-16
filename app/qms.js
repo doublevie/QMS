@@ -1,5 +1,36 @@
+var Settings = {
+  guichets : 1,
+}
 var call = new Audio();
 var qms = {
+  data : [],
+    ln : [3000,5000,10000,15000,20000,25000,30000,35000],
+timer : 20000,
+jsonCall : function(){
+frequency.getJSON('server/json.php',function(x){
+qms.data = x;
+qms.timer = qms.ln[x.length];
+console.log('timer'+qms.timer);
+var interv  ;
+if (x && x.length) {
+for (var i = 0; i < x.length; i++) {
+  interv = 4200 * i ;
+
+qms.call(x[i].nmb,x[i].g,interv);
+console.log(i);
+}
+}
+window.setTimeout(function(){qms.jsonCall()},qms.ln[x.length]);
+});
+
+} ,
+call : function(n,g,interv) {
+  window.setTimeout(function(){
+
+ qms.showNumber(n, g);
+  },interv);
+} ,
+
 clock : function(el) {
 var d = new Date(), dm = d.getMinutes() , dh = d.getHours();
 dh = qms.checkTime(dh) ;
@@ -13,7 +44,7 @@ current : -1,
 ads: [
   {type:'image',src:'freq.jpg',duration:'7000'} ,
   {type:'image',src:'ad1.png',duration:'5000'} ,
-  {type:'video',src:'small.mp4',duration:'18000'} ,
+  // {type:'video',src:'small.mp4',duration:'18000'} ,
 ],
 
  hideVideo : function(){
@@ -57,16 +88,22 @@ qms.initAd()
 
 
  showNumber : function(n,g) {
+var p1 = performance.now() , p2 , time;
    if (qms.ads[qms.current].type == 'video') qms.muteVideo();
-  //  _('[number]').innerHTML = n;
-  //  _('[guch]').innerHTML = g;
+
    var a = _('.smallNumber') , b =  _('.showNumber');
-   b.innerHTML = '<small>NUMERO </small>'+n +'<small>GUICHET </small>'+g ;
-   a.innerHTML = '<small>NUMERO </small>'+n +'<small>GUICHET </small>'+g ;
+   var inner = (Settings.guichets == 1? '<div class="numberOnly"><small>NUMERO </small>'+n+'</div>':'<small>NUMERO </small>'+n +'<small>GUICHET </small>'+g)
+   var inner2 = (Settings.guichets == 1? '<div class="numberOnly"><small>NUMERO </small>00'+n+'</div>':'<small>NUMERO </small>00'+n +'<small>GUICHET </small>'+g)
+    a.innerHTML = inner2;
+    b.innerHTML = inner;
+
+
+
 call.src = 'call/'+n+'.ogg';
 call.load();
 call.play();
-
+p2 = performance.now() ; time = Math.round(p2 - p1);
+// console.log(time);
    b.classList.remove('show');
    ramjet.transform( a, b, {
   done: function () {
@@ -86,14 +123,36 @@ window.setTimeout(function(){
 });
 
 
-},4000)
+},4000);
 
  }
-
-
-
-
 
 }
 
 qms.initAd();
+qms.jsonCall();
+
+
+
+
+
+
+
+
+
+var test = {
+  begin : 0 ,
+  end : 10,
+init : function(){
+test.begin += 1;
+ if (test.begin <= test.end) {
+qms.showNumber(test.begin);
+ } else {
+test.begin = 0;
+ }
+window.setTimeout(function(){test.init()},5000);
+
+}
+}
+
+// test.init();
