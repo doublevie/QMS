@@ -1,13 +1,28 @@
 var Settings = {
   guichets : 1,
 }
+
+frequency.getJSON('conf/json.php',function(conf){
+Settings.guichets = conf.NOMBRE_GUICHETS;
+Settings.nomFr = conf.NOM_SOCIETE;
+Settings.tel = conf.TEL_SOCIETE;
+_('.soc').innerHTML = Settings.nomFr;
+if (Settings.tel.length) _('.tel').innerHTML = 'TEL '+Settings.tel;
+
+
+qms.jsonCall();
+});
+
+
+
 var call = new Audio();
 var qms = {
   data : [],
     ln : [3000,5000,10000,15000,20000,25000,30000,35000],
 timer : 20000,
 jsonCall : function(){
-frequency.getJSON('server/json.php',function(x){
+frequency.getJSON('server/json.php',function(z){
+  var x = z.call
 qms.data = x;
 qms.timer = qms.ln[x.length];
 console.log('timer'+qms.timer);
@@ -40,6 +55,12 @@ var clock = dh + '<span>:</span>' + dm;
 window.setTimeout(function(){qms.clock(el)},60000);
 } ,
  checkTime : function(i) {if (i < 10) {i = "0" + i}; return i;},
+ fullDate : function (){
+
+     var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' } ,
+     date = new Date();
+      _('.fulldate').innerHTML =   date.toLocaleDateString("fr-FR",options);
+ },
 current : -1,
 ads: [
   {type:'image',src:'freq.jpg',duration:'7000'} ,
@@ -90,7 +111,6 @@ qms.initAd()
  showNumber : function(n,g) {
 var p1 = performance.now() , p2 , time;
    if (qms.ads[qms.current].type == 'video') qms.muteVideo();
-
    var a = _('.smallNumber') , b =  _('.showNumber');
    var inner = (Settings.guichets == 1? '<div class="numberOnly"><small>NUMERO </small>'+n+'</div>':'<small>NUMERO </small>'+n +'<small>GUICHET </small>'+g)
    var inner2 = (Settings.guichets == 1? '<div class="numberOnly"><small>NUMERO </small>00'+n+'</div>':'<small>NUMERO </small>00'+n +'<small>GUICHET </small>'+g)
@@ -130,7 +150,7 @@ window.setTimeout(function(){
 }
 
 qms.initAd();
-qms.jsonCall();
+
 
 
 

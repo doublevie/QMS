@@ -19,10 +19,10 @@
 <div class="topextra">
   <div class="container-fluid">
 <div class="row">
-<div class="col-sm-5">
-BIENVENUE
+<div class="col-sm-5 tel">
+
 </div>
-<div class="col-sm-5">
+<div class="col-sm-5 fulldate">
 VENDREDI 15 JUIN 2017
 </div>
 <div class="col-sm-2 clock" align="right">
@@ -65,13 +65,24 @@ VENDREDI 15 JUIN 2017
 <div class="bottomInfos">
 <div class="row">
 <div class="col-xs-5 smallNumber">
+<div class="numberOnly">
+0
+</div>
+</div>
+<div class="col-xs-4 ">
+  <div class="bottomTitle">
+TOTAL
+  </div>
 
+  <div class="bottomBig">
+5
+  </div>
 
 </div>
-<div class="col-xs-7 ">
-
+<div class="col-xs-3" style="background:red;height:15vh;margin:0">
 
 </div>
+
 </div>
 </div>
 
@@ -82,5 +93,6 @@ VENDREDI 15 JUIN 2017
   <script type="text/javascript" src="app/qms.js"></script>
   <script type="text/javascript">
 qms.clock('.clock');
+qms.fullDate();
   </script>
 </html>

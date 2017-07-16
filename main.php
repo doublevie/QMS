@@ -23,6 +23,10 @@
 <p>NOMBRE DES GUICHETS : 6</p>
 <p>ERREURS : 0</p>
 
+
+<a href="#" class="btn btn-block btn-danger btn-lg" onclick="addTicket(this)">AJOUTER</a>
+
+
 </div>
 
 <div class="col-sm-8 bord" style="border-left:none;">
@@ -40,5 +44,20 @@
 
 
 <script src="assets/js/frequency.min.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+var canAdd = true;
+function addTicket(sel) {
+  if (canAdd) {
+    canAdd = false;
+    frequency.get('server/new.php',function(x){
+      console.log(x);
+      sel.innerText = x;
+      window.setTimeout(function(){canAdd = true;},5000);
+    });
+  }
+
+}
+</script>
   </body>
 </html>
