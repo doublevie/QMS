@@ -1,5 +1,6 @@
 var Settings = {
   guichets : 1,
+  echofiles : 'http://127.0.0.1/nmb/'
 }
 
 frequency.getJSON('conf/json.php',function(conf){
@@ -14,28 +15,34 @@ qms.jsonCall();
 });
 
 
+function pad( string) {
+  return (3 <= string.length) ? string : pad('0' + string);
+}
+
 
 var call = new Audio();
 var qms = {
   data : [],
-    ln : [3000,5000,10000,15000,20000,25000,30000,35000],
+    ln : [3000,8000,12000,17000,22000,27000,32000,37000,42000,47000,52000],
 timer : 20000,
 jsonCall : function(){
 frequency.getJSON('server/json.php',function(z){
-  var x = z.call
+  var x = z.call;
 qms.data = x;
+
 qms.timer = qms.ln[x.length];
-console.log('timer'+qms.timer);
+// console.log('timer'+qms.timer);
 var interv  ;
 if (x && x.length) {
 for (var i = 0; i < x.length; i++) {
-  interv = 4200 * i ;
-
+  interv = (4200 * i )+ 500 ;
+  console.log('interv'+interv);
 qms.call(x[i].nmb,x[i].g,interv);
-console.log(i);
+
 }
 }
-window.setTimeout(function(){qms.jsonCall()},qms.ln[x.length]);
+console.log('timerNow : '+qms.ln[x.length]);
+window.setTimeout(function(){qms.jsonCall();},qms.ln[x.length]);
 });
 
 } ,
@@ -112,14 +119,14 @@ qms.initAd()
 var p1 = performance.now() , p2 , time;
    if (qms.ads[qms.current].type == 'video') qms.muteVideo();
    var a = _('.smallNumber') , b =  _('.showNumber');
-   var inner = (Settings.guichets == 1? '<div class="numberOnly"><small>NUMERO </small>'+n+'</div>':'<small>NUMERO </small>'+n +'<small>GUICHET </small>'+g)
-   var inner2 = (Settings.guichets == 1? '<div class="numberOnly"><small>NUMERO </small>00'+n+'</div>':'<small>NUMERO </small>00'+n +'<small>GUICHET </small>'+g)
+   var inner = (Settings.guichets == 1? '<div class="numberOnly"><small>NUMERO </small>'+pad(n)+'</div>':'<small>NUMERO </small>'+pad(n) +'<small>GUICHET </small>'+g)
+   var inner2 = (Settings.guichets == 1? '<div class="numberOnly"><small>NUMERO </small>'+pad(n)+'</div>':'<small>NUMERO </small>'+pad(n) +'<small>GUICHET </small>'+g)
     a.innerHTML = inner2;
     b.innerHTML = inner;
 
 
 
-call.src = 'call/'+n+'.ogg';
+call.src = Settings.echofiles+'call/'+n+'.ogg';
 call.load();
 call.play();
 p2 = performance.now() ; time = Math.round(p2 - p1);
@@ -143,7 +150,7 @@ window.setTimeout(function(){
 });
 
 
-},4000);
+},3800);
 
  }
 
@@ -160,19 +167,7 @@ qms.initAd();
 
 
 
-var test = {
-  begin : 0 ,
-  end : 10,
-init : function(){
-test.begin += 1;
- if (test.begin <= test.end) {
-qms.showNumber(test.begin);
- } else {
-test.begin = 0;
- }
-window.setTimeout(function(){test.init()},5000);
 
-}
-}
+
 
 // test.init();

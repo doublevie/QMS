@@ -48,7 +48,7 @@ h1[number] {text-align: center;}
 
 .showNumber.show {height:50vh;opacity: 1;background: #fff;z-index: 9;
 text-align: center;line-height: 19vh;font-size: 16vh;text-align: center;}
- 
+
 .showNumber .numberOnly {line-height: 38vh;font-size: 32vh;}
 
 .showNumber.show small {font-size: 5vh;line-height: 6vh;display: block}
