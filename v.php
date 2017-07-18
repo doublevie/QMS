@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/layout.css">
   </head>
-  <body amber>
+  <body>
 
 <div class="topInfos">
 
@@ -66,7 +66,7 @@ VENDREDI 15 JUIN 2017
 <div class="row">
 <div class="col-xs-5 smallNumber">
 <div class="numberOnly">
-0
+
 </div>
 </div>
 <div class="col-xs-4 ">

@@ -68,6 +68,17 @@
         </td>
       </tr>
 
+      <tr>
+        <td>THEME</td>
+        <td>
+<select class="form-control" name="THEME"  onchange="save(this)">
+<option value="amber">ORANGE</option>
+<option value="green">VERT</option>
+<option value="rouge">ROUGE</option>
+</select>
+        </td>
+      </tr>
+
 
 
 

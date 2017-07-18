@@ -1,6 +1,6 @@
 var Settings = {
   guichets : 1,
-  echofiles : 'http://127.0.0.1/nmb/'
+  echofiles : 'http://127.0.0.1/nmb/' ,
 }
 
 frequency.getJSON('conf/json.php',function(conf){
@@ -9,9 +9,11 @@ Settings.nomFr = conf.NOM_SOCIETE;
 Settings.tel = conf.TEL_SOCIETE;
 _('.soc').innerHTML = Settings.nomFr;
 if (Settings.tel.length) _('.tel').innerHTML = 'TEL '+Settings.tel;
-
-
+document.body.setAttribute(conf.THEME , '');
+console.log(conf.THEME);
+qms.initAd();
 qms.jsonCall();
+
 });
 
 
@@ -27,13 +29,10 @@ var qms = {
 timer : 20000,
 jsonCall : function(){
 frequency.getJSON('server/json.php',function(z){
- 
     _('.countAll').innerText = z.count;
   var x = z.call;
 qms.data = x;
-
 qms.timer = qms.ln[x.length];
-// console.log('timer'+qms.timer);
 var interv  ;
 if (x && x.length) {
 for (var i = 0; i < x.length; i++) {
@@ -72,8 +71,9 @@ window.setTimeout(function(){qms.clock(el)},60000);
  },
 current : -1,
 ads: [
-  {type:'image',src:'freq.jpg',duration:'7000'} ,
   {type:'image',src:'ad1.png',duration:'5000'} ,
+  {type:'image',src:'ad2.png',duration:'5000'} ,
+  {type:'image',src:'ad3.png',duration:'5000'}
   // {type:'video',src:'small.mp4',duration:'18000'} ,
 ],
 
@@ -158,7 +158,7 @@ window.setTimeout(function(){
 
 }
 
-qms.initAd();
+
 
 
 

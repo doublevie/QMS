@@ -10,7 +10,6 @@ function loadTab(x,el) {
 window.onload = function(){
   loadSettings();
   loadTab(0);
-
 }
 
 
@@ -21,8 +20,9 @@ frequency.post('conf/save.php','key='+key+'&val='+val,function(z){
   if (z !== '1') alert('z');
   console.log(z+' '+key) ;
 });
-
 }
+
+
 
 function loadSettings(){
   frequency.getJSON('conf/json.php',function(e){
@@ -32,6 +32,6 @@ _('[name="ADRESSE_SOCIETE"]').value = e.ADRESSE_SOCIETE;
 _('[name="TEL_SOCIETE"]').value = e.TEL_SOCIETE;
 _('[name="DISPLAYTYPE"]').value = e.DISPLAYTYPE;
 _('[name="NOMBRE_GUICHETS"]').value = e.NOMBRE_GUICHETS;
-
+_('[name="THEME"]').value = e.THEME;
   });
 }
