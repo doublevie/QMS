@@ -1,7 +1,7 @@
 <?php
 
 $ip = $_SERVER['REMOTE_ADDR'];
-$last = explode('.';$ip)[3];
+// $last = explode('.';$ip)[3];
 
 
 

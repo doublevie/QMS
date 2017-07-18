@@ -73,8 +73,8 @@ current : -1,
 ads: [
   {type:'image',src:'ad1.png',duration:'5000'} ,
   {type:'image',src:'ad2.png',duration:'5000'} ,
-  {type:'image',src:'ad3.png',duration:'5000'}
-  // {type:'video',src:'small.mp4',duration:'18000'} ,
+  {type:'image',src:'ad3.png',duration:'5000'},
+  {type:'video',src:'SampleVideo_1280x720_2mb.mp4',duration:'13000'} ,
 ],
 
  hideVideo : function(){

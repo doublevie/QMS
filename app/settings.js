@@ -33,5 +33,6 @@ _('[name="TEL_SOCIETE"]').value = e.TEL_SOCIETE;
 _('[name="DISPLAYTYPE"]').value = e.DISPLAYTYPE;
 _('[name="NOMBRE_GUICHETS"]').value = e.NOMBRE_GUICHETS;
 _('[name="THEME"]').value = e.THEME;
+_('[name="MAXNUMBER"]').value = e.MAXNUMBER;
   });
 }

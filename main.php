@@ -62,9 +62,12 @@ canCall = false;
 frequency.get('server/callnext.php',function(x){
    document.title = 'NUMERO '+x ;
    var sel = document.querySelectorAll(ss);
+   if (x && x.length) {
+
    for (var i = 0; i < sel.length; i++) {
      sel[i].innerText = x;
    }
+ }
 
   window.setTimeout(function(){canCall = true;},100);
 });
