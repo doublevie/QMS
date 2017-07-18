@@ -74,7 +74,7 @@ VENDREDI 15 JUIN 2017
 TOTAL
   </div>
 
-  <div class="bottomBig">
+  <div class="bottomBig countAll">
 5
   </div>
 

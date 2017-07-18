@@ -27,6 +27,8 @@ var qms = {
 timer : 20000,
 jsonCall : function(){
 frequency.getJSON('server/json.php',function(z){
+ 
+    _('.countAll').innerText = z.count;
   var x = z.call;
 qms.data = x;
 
