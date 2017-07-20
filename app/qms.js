@@ -1,7 +1,11 @@
 var Settings = {
   guichets : 1,
   echofiles : 'http://127.0.0.1/nmb/' ,
+  cdn : 'http://127.0.0.1/ad/',
+  adsvolume : 0.5,
 }
+
+
 
 frequency.getJSON('conf/json.php',function(conf){
 Settings.guichets = conf.NOMBRE_GUICHETS;
@@ -21,18 +25,19 @@ function pad( string) {
   return (3 <= string.length) ? string : pad('0' + string);
 }
 
-
+var timer;
 var call = new Audio();
 var qms = {
   data : [],
     ln : [3000,8000,12000,17000,22000,27000,32000,37000,42000,47000,52000],
-timer : 20000,
+
 jsonCall : function(){
 frequency.getJSON('server/json.php',function(z){
     _('.countAll').innerText = z.count;
   var x = z.call;
+timer = (z.count == '0' ?40000:qms.ln[x.length]);
 qms.data = x;
-qms.timer = qms.ln[x.length];
+
 var interv  ;
 if (x && x.length) {
 for (var i = 0; i < x.length; i++) {
@@ -42,8 +47,8 @@ qms.call(x[i].nmb,x[i].g,interv);
 
 }
 }
-console.log('timerNow : '+qms.ln[x.length]);
-window.setTimeout(function(){qms.jsonCall();},qms.ln[x.length]);
+console.log('timerNow : '+timer);
+window.setTimeout(function(){qms.jsonCall();},timer);
 });
 
 } ,
@@ -71,10 +76,12 @@ window.setTimeout(function(){qms.clock(el)},60000);
  },
 current : -1,
 ads: [
+  {type:'video',src:'OPPO F1 Plus - Selfie Expert (FCB version).mp4',duration:'30000'} ,
+  {type:'video',src:'Samsung Galaxy S8 Watching.mp4',duration:'16000'} ,
   {type:'image',src:'ad1.png',duration:'5000'} ,
-  {type:'image',src:'ad2.png',duration:'5000'} ,
+/*  {type:'image',src:'ad2.png',duration:'5000'} ,
   {type:'image',src:'ad3.png',duration:'5000'},
-  {type:'video',src:'SampleVideo_1280x720_2mb.mp4',duration:'13000'} ,
+  {type:'video',src:'SampleVideo_1280x720_2mb.mp4',duration:'13000'} ,*/
 ],
 
  hideVideo : function(){
@@ -88,7 +95,8 @@ ads: [
    qms.hideImge();
  _('video').classList.add('show');
  console.log(qms.ads[qms.current].src);
- _('video').src = 'ad/'+qms.ads[qms.current].src ;
+ _('video').src = Settings.cdn+qms.ads[qms.current].src ;
+ _('video').volume = Settings.adsvolume;
   _('video').load();
   _('video').play() ;
  } ,
@@ -96,12 +104,12 @@ ads: [
    _('video').volume = 0.2;
   } ,
   repriseMutedVideo : function(){
-    _('video').volume = 1;
+    _('video').volume = Settings.adsvolume;
   },
  playImage : function() {
    qms.hideVideo();
  _('img.main').classList.add('show');
- _('img.main').src = 'ad/'+qms.ads[qms.current].src ;
+ _('img.main').src = Settings.cdn+qms.ads[qms.current].src ;
  } ,
  initAd : function() {
 qms.current++;
@@ -122,11 +130,9 @@ var p1 = performance.now() , p2 , time;
    if (qms.ads[qms.current].type == 'video') qms.muteVideo();
    var a = _('.smallNumber') , b =  _('.showNumber');
    var inner = (Settings.guichets == 1? '<div class="numberOnly"><small>NUMERO </small>'+pad(n)+'</div>':'<small>NUMERO </small>'+pad(n) +'<small>GUICHET </small>'+g)
-   var inner2 = (Settings.guichets == 1? '<div class="numberOnly"><small>NUMERO </small>'+pad(n)+'</div>':'<small>NUMERO </small>'+pad(n) +'<small>GUICHET </small>'+g)
+   var inner2 = (Settings.guichets == 1? '<div class="numberOnly"><small> </small>'+pad(n)+'</div>':'<small>NUMERO </small>'+pad(n) +'<small>GUICHET </small>'+g)
     a.innerHTML = inner2;
     b.innerHTML = inner;
-
-
 
 call.src = Settings.echofiles+'call/'+n+'.ogg';
 call.load();

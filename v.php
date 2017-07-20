@@ -88,11 +88,16 @@ TOTAL
 
 
   </body>
+
+  <script src="https://cdn.ravenjs.com/3.17.0/raven.min.js" crossorigin="anonymous"></script>
+
   <script type="text/javascript" src="assets/js/frequency.min.js"></script>
   <script type="text/javascript" src="assets/js/ramjet.js"></script>
   <script type="text/javascript" src="app/qms.js"></script>
   <script type="text/javascript">
 qms.clock('.clock');
 qms.fullDate();
+Raven.config('https://4de3e45a9b8b43c4b5338e75ef75a797@sentry.io/193765').install()
+
   </script>
 </html>

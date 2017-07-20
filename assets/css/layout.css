@@ -5,45 +5,48 @@ body {
 
 .topInfos {
   position: fixed;top:0;left:0;right:0;
-  height:12vh;
+  height:20vh;
   border-bottom: 1px solid rgba(0,0,0,0.2);
 margin:0}
 
-.soc {font-size: 5vh;line-height: 8vh;text-align: center;
+.soc {font-size: 5vh;line-height:16vh;text-align: center;
 border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 .topextra {line-height: 4vh;font-size: 2vh}
 
 
 .media {
-  position: fixed;top:12vh;left:0;right:0;
+  position: fixed;top:20vh;left:0;right:0;
   height:73vh;background: #111111;margin:0;
 }
 
 .media video {
   width:100vw;
   opacity: 0;pointer-events: none;
-  height:0;
+  height:0;margin:0;padding:0;
+
 }
 
 .media img {
   width:100vw;height:0;
   opacity: 0;pointer-events: none;
-
+margin:0;padding:0;
 }
 
 .media img.show , .media video.show {
   opacity: 1;pointer-events: auto;
   height:auto;z-index: 5;
+  max-height: 70vh;
 }
 
 
 .smallNumber {background: #fff;z-index: 9}
 .showNumber {
-position: fixed;top:20vh;left:5vw;right:5vw;height:50vh;opacity: 0;
+position: fixed;top:35vh;left:0vw;right:0vw;height:50vh;opacity: 0;
 text-align: center;
--webkit-box-shadow: 0px 11px 30px -10px rgba(0,0,0,0.55);
-box-shadow: 0px 11px 30px -10px rgba(0,0,0,0.55);
+/*-webkit-box-shadow: 0px 11px 30px -10px rgba(0,0,0,0.55);*/
+/*box-shadow: 0px 11px 30px -10px rgba(0,0,0,0.55);*/
+box-shadow:none
 }
 h1[number] {text-align: center;}
 
@@ -51,15 +54,15 @@ h1[number] {text-align: center;}
 .showNumber.show {height:50vh;opacity: 1;background: #fff;z-index: 9;
 text-align: center;line-height: 19vh;font-size: 16vh;text-align: center;}
 
-.showNumber .numberOnly {line-height: 38vh;font-size: 32vh;}
+.showNumber .numberOnly {line-height: 38vh;font-size: 28vh;}
 
 .showNumber.show small {font-size: 5vh;line-height: 6vh;display: block}
 .showNumber .numberOnly small  {font-size: 10vh;line-height: 12vh;display: block}
 
 .smallNumber {line-height: 5vh;font-size: 3vh;text-align: center;}
 .smallNumber .numberOnly , .bottomBig {line-height: 12vh;font-size: 10vh;text-align: center;}
-.smallNumber small {font-size: 2vh;line-height: 3vh;display: block}
-.smallNumber .numberOnly  small , .bottomTitle {font-size: 4vh;line-height: 4vh;text-align: center;}
+.smallNumber small {font-size: 1vh;line-height: 3vh;display: block;height:3vh;}
+.smallNumber .numberOnly  small , .bottomTitle {font-size: 2vh;line-height: 4vh;text-align: center;}
 
 
 
@@ -69,7 +72,9 @@ text-align: center;line-height: 19vh;font-size: 16vh;text-align: center;}
 .bottomInfos {
   position: fixed;bottom:0;left:0;right:0;
   height:15vh;
-  border-top: 1px solid rgba(0,0,0,0.2);
+  border-top: 1px solid rgba(0,0,0,0.1);
+  z-index: 8;
+  background: #fff;
 }
 
 
