@@ -19,9 +19,9 @@
   <ul class="settingsUl">
   <li onclick="loadTab(0,this)"><i class="fa fa-cog"></i> GENERAL</li>
   <li onclick="loadTab(1,this)"><i class="fa fa-desktop"></i> AFFICHAGE</li>
-  <li onclick="loadTab(2,this)"><i class="fa fa-puzzle-piece"></i> EXTRA</li>
-  <li onclick="loadTab(3,this)"><i class="fa fa-user"></i> COMPTES</li>
-  <li onclick="loadTab(4,this)"><i class="fa fa-cog"></i> FREUENCY</li>
+  <li onclick="loadTab(2,this)"><i class="fa fa-cog"></i> SYSTEM</li>
+  <!-- <li onclick="loadTab(3,this)"><i class="fa fa-user"></i> COMPTES</li> -->
+  <!-- <li onclick="loadTab(4,this)"><i class="fa fa-cog"></i> FREUENCY</li> -->
   </ul>
 </div>
 <div class="col-sm-8 bord" style="border:none">
@@ -106,7 +106,20 @@
 </div>
 <div class="settingsWell" data-tab="2">
   <div class="inner">
-    <h1>EXTRA </h1>
+    <h1>SYSTEM </h1>
+
+    <table class="settingsTable">
+    <tr>
+      <td>BASE AUDIO</td>
+      <td><input type="text" class="form-control" name="BASE_AUDIO" value="" onkeyup="save(this)"></td>
+    </tr>
+
+    <tr>
+      <td>BASE CDN</td>
+      <td><input type="text" class="form-control" name="BASE_CDN" value="" onkeyup="save(this)"></td>
+    </tr>
+
+</table>
   </div>
 </div>
 

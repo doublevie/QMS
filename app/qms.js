@@ -1,7 +1,5 @@
 var Settings = {
   guichets : 1,
-  echofiles : 'http://127.0.0.1/nmb/' ,
-  cdn : 'http://127.0.0.1/ad/',
   adsvolume : 0.5,
 }
 
@@ -11,6 +9,8 @@ frequency.getJSON('conf/json.php',function(conf){
 Settings.guichets = conf.NOMBRE_GUICHETS;
 Settings.nomFr = conf.NOM_SOCIETE;
 Settings.tel = conf.TEL_SOCIETE;
+Settings.cdn = conf.BASE_CDN;
+Settings.echofiles = conf.BASE_AUDIO;
 _('.soc').innerHTML = Settings.nomFr;
 if (Settings.tel.length) _('.tel').innerHTML = 'TEL '+Settings.tel;
 document.body.setAttribute(conf.THEME , '');
@@ -35,7 +35,7 @@ jsonCall : function(){
 frequency.getJSON('server/json.php',function(z){
     _('.countAll').innerText = z.count;
   var x = z.call;
-timer = (z.count == '0' ?40000:qms.ln[x.length]);
+timer = (z.count == '0' ?20000:qms.ln[x.length]);
 qms.data = x;
 
 var interv  ;
@@ -76,8 +76,8 @@ window.setTimeout(function(){qms.clock(el)},60000);
  },
 current : -1,
 ads: [
-  {type:'video',src:'OPPO F1 Plus - Selfie Expert (FCB version).mp4',duration:'30000'} ,
-  {type:'video',src:'Samsung Galaxy S8 Watching.mp4',duration:'16000'} ,
+  {type:'video',src:'small.ogv',duration:'5000'} ,
+  {type:'video',src:'Xacti-AC8EX-Sample_video-001.ogv',duration:'5000'} ,
   {type:'image',src:'ad1.png',duration:'5000'} ,
 /*  {type:'image',src:'ad2.png',duration:'5000'} ,
   {type:'image',src:'ad3.png',duration:'5000'},

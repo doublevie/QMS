@@ -11,7 +11,7 @@ foreach($result_one as $row) {
 $data['echo'] = "-";
 $data['last'] = "-";
 
-$result_one = $live->query("SELECT *  FROM MAIN WHERE DONE='2' ORDER BY ID DESC LIMIT 1") OR $errors++;
+$result_one = $live->query("SELECT *  FROM MAIN WHERE DONE<>'1' AND  DONE<>'0' ORDER BY ID DESC LIMIT 1") OR $errors++;
 foreach($result_one as $row) {
   $data['echo'] = $row['ECHO'];
 }

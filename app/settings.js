@@ -34,5 +34,7 @@ _('[name="DISPLAYTYPE"]').value = e.DISPLAYTYPE;
 _('[name="NOMBRE_GUICHETS"]').value = e.NOMBRE_GUICHETS;
 _('[name="THEME"]').value = e.THEME;
 _('[name="MAXNUMBER"]').value = e.MAXNUMBER;
+_('[name="BASE_CDN"]').value = e.BASE_CDN;
+_('[name="BASE_AUDIO"]').value = e.BASE_AUDIO;
   });
 }

@@ -4,6 +4,7 @@ body {
 
 .btn {border-radius: 0}
 .btn-big1 {height:20vh;line-height: 18vh;font-size: 10vh;}
+.btn-big2 {height:14vh;line-height: 12vh;font-size: 10vh;}
 
 .mainmenu {
   position: fixed;top: 0;left:0;right:0;height: 50px;border-bottom: 1px solid rgba(0,0,0,0.15);padding:0;

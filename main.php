@@ -24,11 +24,12 @@
 <p>ERREURS : 0</p>
 
 
-<a href="#" class="btn btn-block btn-danger btn-lg tickets" onclick="addTicket('.tickets')">ADD</a>
+<!-- <a href="#" class="btn btn-block btn-danger btn-lg tickets" onclick="addTicket('.tickets')">ADD</a> -->
 
 </div>
 
 <div class="col-sm-8 bord" style="border-left:none;">
+  <a href="#" class="btn btn-block btn-info btn-big1 btn-lg tickets" onclick="addTicket('.tickets')">-</a>
   <a href="#" class="btn btn-block btn-success btn-big1 btn-lg now" onclick="callNext('.now')">CALL</a>
 </div>
 
