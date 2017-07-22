@@ -37,6 +37,7 @@ margin:0;padding:0;
   opacity: 1;pointer-events: auto;
   height:auto;z-index: 5;
   max-height: 70vh;
+
 }
 
 
@@ -60,10 +61,10 @@ text-align: center;line-height: 19vh;font-size: 16vh;text-align: center;}
 .showNumber .numberOnly small  {font-size: 10vh;line-height: 12vh;display: block}
 
 .smallNumber {line-height: 5vh;font-size: 3vh;text-align: center;}
-.smallNumber .numberOnly , .bottomBig {line-height: 12vh;font-size: 10vh;text-align: center;}
+.smallNumber .numberOnly , .bottomBig {line-height: 10vh;font-size: 7vh;text-align: center;}
 .smallNumber small {font-size: 1vh;line-height: 3vh;display: block;height:3vh;}
-.smallNumber .numberOnly  small , .bottomTitle {font-size: 2vh;line-height: 4vh;text-align: center;}
-
+.smallNumber .numberOnly  small , .bottomTitle {font-size: 3vh;line-height: 4vh;text-align: center;}
+.bottomTitle {height: 4vh;overflow: hidden;}
 
 
 
@@ -81,8 +82,8 @@ text-align: center;line-height: 19vh;font-size: 16vh;text-align: center;}
 
 
 
-body[amber] .topInfos {background: #FFF9C4;border-bottom-color:#FFEE58 ;color:#FF6F00 }
-body[amber] .soc {border-bottom-color:#FFEE58  }
+body[amber] .topInfos {background: #2B1200;border-bottom-color:#2B1200 ;color:#FFC400 }
+body[amber] .soc {border-bottom-color:#2B1200  }
 body[amber] .topInfos .soc{}
-body[amber] .topInfos .topextra{background: #FFF59D;color:#555}
+body[amber] .topInfos .topextra{background: #713000;color:#FFC400}
 body[amber] .showNumber.show {background: #FFEA00;color:#111}

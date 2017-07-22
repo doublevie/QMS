@@ -22,8 +22,8 @@
 <div class="col-sm-6 tel">
 
 </div>
-<div class="col-sm-6 fulldate">
-VENDREDI 15 JUIN 2017
+<div class="col-sm-6 ">
+
 </div>
 
 
@@ -62,7 +62,7 @@ VENDREDI 15 JUIN 2017
 
 <div class="bottomInfos">
 <div class="row">
-<div class="col-xs-5 smallNumber">
+<div class="col-xs-4 smallNumber">
 <div class="numberOnly">
 
 </div>
@@ -77,8 +77,14 @@ TOTAL
   </div>
 
 </div>
-<div class="col-xs-3 clock" style=" margin:0;line-height:15vh;font-size:8vh;font-weight:200;text-align:center">
-0:00
+<div class="col-xs-4 " >
+  <div class="bottomTitle fulldate" >
+
+  </div>
+
+  <div class="bottomBig clock">
+5
+  </div>
 </div>
 
 </div>

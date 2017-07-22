@@ -69,7 +69,6 @@ window.setTimeout(function(){qms.clock(el)},60000);
 } ,
  checkTime : function(i) {if (i < 10) {i = "0" + i}; return i;},
  fullDate : function (){
-
      var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' } ,
      date = new Date();
       _('.fulldate').innerHTML =   date.toLocaleDateString("fr-FR",options);
