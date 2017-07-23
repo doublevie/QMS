@@ -1,0 +1,46 @@
+
+
+.headerDiv {
+padding:0;height:auto;margin:0;
+}
+.headerDiv .infos , .headerDiv .clock , .headerDiv .last {
+  height: 15vh;
+  display: inline-block;
+  width: 33.33333%;
+  margin:0;
+  float: left;
+  border-left:1px solid rgba(0,0,0,0.1);
+  border-bottom:1px solid rgba(0,0,0,0.1);
+
+
+  background: -webkit-linear-gradient(top, #81d4fa 1%,#b3e5fc 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #81d4fa 1%,#b3e5fc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.headerDiv .infos {width:50%}
+.headerDiv .clock {width:25%}
+.headerDiv .last {width:25%}
+
+
+.buttonDiv {
+  position: fixed;
+  bottom: 15px;left:15px;right:15px;
+  height: 10vh;
+}
+
+.btn {border-radius: 0}
+
+.btn-lg,
+.btn-group-lg > .btn {
+  padding: 25px 16px;
+  font-size: 25px;
+  line-height: 1.3333333;
+  /*text-align: left;*/
+ }
+
+
+
+ .btn-info , .btn-info:active:focus , .btn-info:focus {
+   background-color: #00B0FF;
+   border-color: #00B0FF;
+ }
