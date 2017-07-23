@@ -129,9 +129,9 @@ var p1 = performance.now() , p2 , time;
     a.innerHTML = inner2;
     b.innerHTML = inner;
 
-call.src = Settings.echofiles+'call/'+n+'.ogg';
-call.load();
-call.play();
+//call.src = Settings.echofiles+'call/'+n+'.ogg';
+  call.load();
+    Android.playNumber(n);
 p2 = performance.now() ; time = Math.round(p2 - p1);
 // console.log(time);
    b.classList.remove('show');
