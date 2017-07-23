@@ -75,7 +75,9 @@ window.setTimeout(function(){qms.clock(el)},60000);
  },
 current : -1,
 ads: [
-  {type:'image',src:'samsung.jpg',duration:'5000'} ,
+  {type:'video',src:'OPPO F1 Plus - Selfie Expert (FCB version).mp4',duration:'30000'} ,
+  {type:'video',src:'Samsung Galaxy S8 Watching.mp4',duration:'16000'} ,
+  {type:'video',src:'SampleVideo_1280x720_2mb.mp4',duration:'16000'} ,
   {type:'image',src:'samsung.jpg',duration:'5000'} ,
 ],
 

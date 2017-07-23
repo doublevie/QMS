@@ -118,6 +118,10 @@
       <td>BASE CDN</td>
       <td><input type="text" class="form-control" name="BASE_CDN" value="" onkeyup="save(this)"></td>
     </tr>
+    <tr>
+      <td>IMPRIMANTE</td>
+      <td><input type="text" class="form-control" name="PRINTER" value="" onkeyup="save(this)"></td>
+    </tr>
 
 </table>
   </div>

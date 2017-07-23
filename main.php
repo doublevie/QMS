@@ -1,3 +1,11 @@
+<?php
+$ini = parse_ini_file("conf/qms.ini");
+
+setcookie("NOM_SOCIETE", $ini["NOM_SOCIETE"], time()+3600*24*7);
+setcookie("ADRESSE_SOCIETE", $ini["ADRESSE_SOCIETE"], time()+3600*24*7);
+// setcookie("TEL_SOCIETE ", $ini["TEL_SOCIETE"], time()+3600*24*7);
+setcookie("PRINTER", $ini["PRINTER"], time()+3600*24*7);
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
