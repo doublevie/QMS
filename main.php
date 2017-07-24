@@ -1,4 +1,5 @@
 <?php
+require "user.php";
 $ini = parse_ini_file("conf/qms.ini");
 
 setcookie("NOM_SOCIETE", $ini["NOM_SOCIETE"], time()+3600*24*7);

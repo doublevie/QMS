@@ -1,3 +1,4 @@
+<?php require "user.php" ?>
 <!DOCTYPE html>
 <html>
   <head>

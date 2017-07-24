@@ -7,7 +7,7 @@
 </ul>
 <ul class="right">
 <li><i class="fa fa-user-circle"></i></li>
-<li><i class="fa fa-sign-out"></i></li>
+<li><a href="logout.php"><i class="fa fa-sign-out"></i></a></li>
 <li><a href="tot.php"><i class="fa fa-file-image-o"></i></a></li>
 <li><a href="settings.php"><i class="fa fa-cog"></i></a></li>
 </ul>
