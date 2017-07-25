@@ -1,22 +1,25 @@
 <?php
 $data = Array();
-$live = new PDO('sqlite:data/queue.sqlite');
-$live->exec("pragma synchronous = off;");
+$db = new SQLite3('data/queue.sqlite',SQLITE3_OPEN_READONLY);
 
 $errors = 0;
-$result_one = $live->query("SELECT COUNT(ID) AS CID FROM MAIN WHERE DONE='0' OR DONE ='1' ") OR $errors++;
-foreach($result_one as $row) {
-  $data['COUNT'] = $row['CID'];
+
+$results = $db->query("SELECT COUNT(ID) AS CID FROM MAIN WHERE DONE='0' OR DONE ='1' ");
+while ($row = $results->fetchArray()) {
+$data['COUNT'] = $row['CID'];
 }
 $data['echo'] = "-";
 $data['last'] = "-";
 
-$result_one = $live->query("SELECT *  FROM MAIN WHERE DONE<>'1' AND  DONE<>'0' ORDER BY ID DESC LIMIT 1") OR $errors++;
-foreach($result_one as $row) {
+
+$results = $db->query("SELECT *  FROM MAIN WHERE DONE<>'1' AND  DONE<>'0' ORDER BY DONE DESC LIMIT 1");
+while ($row = $results->fetchArray()) {
   $data['echo'] = $row['ECHO'];
 }
-$result_one = $live->query("SELECT *  FROM MAIN WHERE DONE='0' ORDER BY ID DESC LIMIT 1") OR $errors++;
-foreach($result_one as $row) {
+
+
+$results = $db->query("SELECT *  FROM MAIN WHERE DONE='0' ORDER BY ID DESC LIMIT 1");
+while ($row = $results->fetchArray()) {
   $data['last'] = $row['ECHO'];
 }
 
@@ -27,7 +30,6 @@ if ($errors == 0) {
 
   $data['status'] = 'ERREURS  :'.$errors ;
 }
-
 
 
 $json = json_encode( $data);

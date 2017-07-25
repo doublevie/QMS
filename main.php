@@ -52,15 +52,19 @@ setcookie("PRINTER", $ini["PRINTER"], time()+3600*24*7);
 
 <script type="text/javascript">
 var canAdd = true , canCall = true;
+var p1 , p2 , time;
 function addTicket(ss) {
   if (canAdd) {
+  //  p1 = performance.now();
     canAdd = false;
     frequency.get('server/new.php',function(x){
       var sel = document.querySelectorAll(ss);
       for (var i = 0; i < sel.length; i++) {
         sel[i].innerText = x;
       }
-
+      // p2 = performance.now();
+      // time = Math.round(p2 - p1);
+      //   console.log(time);
       window.setTimeout(function(){canAdd = true;},1000);
     });
   }
@@ -86,11 +90,13 @@ frequency.get('server/callnext.php',function(x){
 
 
 function init(){
+    p1 = performance.now();
   frequency.getJSON('server/check.php',function(res){
 console.log(res);
  var lasEcho =  res.last ;
  var echo =  res.echo ;
  var status =  res.status ;
+
 
 document.querySelectorAll('.tickets')[0].innerText = lasEcho;
 document.querySelectorAll('.tickets')[1].innerText = lasEcho;
@@ -99,7 +105,9 @@ document.querySelectorAll('.now')[1].innerText = echo;
 
 _('.status').innerText = status;
 
-
+p2 = performance.now();
+time = Math.round(p2 - p1);
+  console.log(time);
   });
   window.setTimeout(function(){
 init();
