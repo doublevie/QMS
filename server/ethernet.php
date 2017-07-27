@@ -15,12 +15,10 @@ try {
 $printer->selectPrintMode ( Printer::MODE_DOUBLE_HEIGHT );
 $printer -> text("$header\n");
 $printer->selectPrintMode ();
-$printer -> text("$Adresse\n");
+$printer -> text("$Adresse ");
  $printer -> text("$TEL\n");
-$printer -> text("$today\n");
 $printer->selectPrintMode ();
 
-$printer -> text("$TEL\n");
 $printer -> text("------------------------------------------------");
 
 
@@ -30,8 +28,10 @@ $printer -> text("------------------------------------------------");
 
 $printer -> text("NUMERO \n");
 $printer->selectPrintMode ( Printer::MODE_DOUBLE_HEIGHT | Printer::MODE_DOUBLE_WIDTH );
+$printer->setFont (Printer::FONT_C  );
 $printer -> text("$number \n");
-
+$printer->selectPrintMode();
+$printer -> text("$today\n");
     $printer -> cut();
 
 

@@ -12,7 +12,7 @@ $data['echo'] = "-";
 $data['last'] = "-";
 
 
-$results = $db->query("SELECT *  FROM MAIN WHERE DONE<>'1' AND  DONE<>'0' ORDER BY DONE DESC LIMIT 1");
+$results = $db->query("SELECT *  FROM MAIN WHERE DONE<>'1' AND  DONE<>'0' ORDER BY ID DESC LIMIT 1");
 while ($row = $results->fetchArray()) {
   $data['echo'] = $row['ECHO'];
 }

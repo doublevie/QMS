@@ -11,7 +11,7 @@
 
 <div class="topInfos">
 
-<div class="soc">EURL FREQUECY</div>
+<div class="soc fr"  >EURL FREQUECY</div>
 
 
 
@@ -19,13 +19,13 @@
 <div class="topextra">
   <div class="container-fluid">
 <div class="row">
-<div class="col-sm-5 tel">
+<div class="col-sm-5 tel fr">
 
 </div>
-<div class="col-sm-5 fulldate">
+<div class="col-sm-5 fulldate fr">
 VENDREDI 15 JUIN 2017
 </div>
-<div class="col-sm-2 clock" align="right">
+<div class="col-sm-2 clock fr" align="right">
 12:48
 </div>
 

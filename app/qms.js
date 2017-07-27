@@ -1,6 +1,6 @@
 var Settings = {
   guichets : 1,
-  adsvolume : 0.5,
+  adsvolume : 0,
 }
 
 
@@ -126,8 +126,8 @@ qms.initAd()
 var p1 = performance.now() , p2 , time;
    if (qms.ads[qms.current].type == 'video') qms.muteVideo();
    var a = _('.smallNumber') , b =  _('.showNumber');
-   var inner = (Settings.guichets == 1? '<div class="numberOnly"><small>NUMERO </small>'+pad(n)+'</div>':'<small>NUMERO </small>'+pad(n) +'<small>GUICHET </small>'+g)
-   var inner2 = (Settings.guichets == 1? '<div class="numberOnly"><small> </small>'+pad(n)+'</div>':'<small>NUMERO </small>'+pad(n) +'<small>GUICHET </small>'+g)
+   var inner = (Settings.guichets == 1? '<div class="numberOnly "><small class="fr">NUMERO </small>'+pad(n)+'</div>':'<small>NUMERO </small>'+pad(n) +'<small>GUICHET </small>'+g)
+   var inner2 = (Settings.guichets == 1? '<div class="numberOnly "><small class="fr"> </small>'+pad(n)+'</div>':'<small>NUMERO </small>'+pad(n) +'<small>GUICHET </small>'+g)
     a.innerHTML = inner2;
     b.innerHTML = inner;
 
