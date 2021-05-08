@@ -26,7 +26,7 @@ setcookie("PRINTER", $ini["PRINTER"], time()+3600*24*7);
 
 <div class="container">
 <div class="col-sm-4 bord">
-<p>SERVER STATUS :<span class="status"></span></p>
+<p>ETAT DE SERVEUR :<span class="status"></span></p>
 <!-- <p>NOMBRE DES GUICHETS : 6</p> -->
 <p>NUMERO : <span class="now"></span></p>
 <p>DERNIER TICKET : <span class="tickets"></span></p>
@@ -38,7 +38,7 @@ setcookie("PRINTER", $ini["PRINTER"], time()+3600*24*7);
 </div>
 
 <div class="col-sm-8 bord" style="border-left:none;">
-  <a href="#" class="btn btn-block btn-info btn-big1 btn-lg tickets" onclick="addTicket('.tickets')">-</a>
+  <a href="#" class="btn btn-block btn-info btn-big1 btn-lg tickets" >-</a>
   <a href="#" class="btn btn-block btn-success btn-big1 btn-lg now" onclick="callNext('.now')">CALL</a>
 </div>
 

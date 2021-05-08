@@ -1,5 +1,5 @@
 body {
-  padding-top: 60px;
+  padding-top: 0;
 }
 
 .btn {border-radius: 0}
@@ -28,7 +28,7 @@ body {
 transition: all 0.8s ease;overflow: hidden;margin: 0;
 }
 .settingsWell .inner {pointer-events: none;opacity: 0;transition: all 0.8s ease;padding:150px;}
-.settingsWell.activeTab {height:auto;height: 70vh;margin:0 ;background: #FFF8E1}
+.settingsWell.activeTab {height:auto;height: 80vh;margin:0 ;background: #FFF8E1}
 
 .settingsWell.activeTab .inner {pointer-events: auto;opacity: 1;padding:15px;}
 .settingsWell h1 {color:#FF6F00;text-align: center;}

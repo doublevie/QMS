@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>PARAM</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bs5/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <script type="text/javascript" src="assets/js/frequency.min.js"></script>
@@ -13,14 +13,14 @@
   </head>
   <body amber>
 
-<?php include 'inc/menu.php' ?>
+<?php include 'inc/nav.php' ?>
 <div class="container">
 <div class="row">
 <div class="col-sm-4 bord" style='padding:0'>
   <ul class="settingsUl">
   <li onclick="loadTab(0,this)"><i class="fa fa-cog"></i> GENERAL</li>
   <li onclick="loadTab(1,this)"><i class="fa fa-desktop"></i> AFFICHAGE</li>
-  <li onclick="loadTab(2,this)"><i class="fa fa-cog"></i> SYSTEM</li>
+  <li onclick="loadTab(2,this)"><i class="fa fa-cog"></i> SYSTEME</li>
   <!-- <li onclick="loadTab(3,this)"><i class="fa fa-user"></i> COMPTES</li> -->
   <!-- <li onclick="loadTab(4,this)"><i class="fa fa-cog"></i> FREUENCY</li> -->
   </ul>
@@ -107,7 +107,7 @@
 </div>
 <div class="settingsWell" data-tab="2">
   <div class="inner">
-    <h1>SYSTEM </h1>
+    <h1>SYSTEME </h1>
 
     <table class="settingsTable">
     <tr>

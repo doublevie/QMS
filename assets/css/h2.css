@@ -1,0 +1,207 @@
+@font-face {
+    font-family: "Play";
+    src:  url("../fonts/Play-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Share Tech Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/J7aHnp1uDWRBEqV98dVQztYldFcLowEF.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* arabic */
+@font-face {
+  font-family: 'Changa';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/2-c79JNi2YuVOUcOarRPgnNGooxCZ62xcjLj9ytf.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Changa';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/2-c79JNi2YuVOUcOarRPgnNGooxCZ62xcjnj9ytf.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Changa';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/2-c79JNi2YuVOUcOarRPgnNGooxCZ62xcjfj9w.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body{overflow-x: hidden}
+  .amiri {
+      font-family:  'Changa';
+  }
+
+.rightBar{
+    position:fixed;right: left;top:20vh;bottom: 0;width:28vw;
+    border-left:1px solid rgba(0,0,0,0.2);
+    margin:0;padding:0;
+    z-index: 9;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 7%, rgba(0,0,44,1) 76%);
+    color:#fff;
+    font-family: 'Changa' ,monospace; 
+}
+
+.rightBar ul {
+    margin:0;padding:0;float:none;list-style: none;
+    position:fixed;
+    top:80vh;
+    left:72vw;
+    right:0;
+    height:20vh;
+}
+
+.rightBar ul li {
+    float:left;text-align:center;border-bottom:1px solid rgba(255,255,255,0.1);display: block;width:100%;
+    height: 9vh;padding:6px;
+    font-family: 'Changa' ;
+    font-size: 3vh;
+}
+
+
+.topInfos {
+  position:fixed;left:28vw;right:0;top:20vh;
+  line-height:5vh;background-color:var(--orange);
+  z-index: 99;
+  direction:rtl;
+  padding:0 15px;
+  font-family:  'Changa';
+  font-size:4vh;line-height: 6vh;
+  
+}
+
+
+.rightBar ul li h1{
+    line-height: 10vh;font-size: 7vh;
+}
+
+.frequency {
+    position: fixed;left:0;bottom:1vh;width:28vw;
+   color:rgba(255, 255, 255, 0.8);
+    font-size: 4vw;
+    text-align: center;
+    z-index: 99;
+    font-family: 'Play';
+
+    background: -webkit-linear-gradient(#ddd, #999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+img.main {
+    position: fixed;
+   top:20vh;right:0;
+    bottom:0;width:72vw;
+    height:80vh;
+    z-index: 0;
+}
+
+video.video {
+  position: fixed;
+  top:20vh;right:0;
+   bottom:0;width:72vw;
+   height:80vh;
+   z-index: 0;
+}
+
+.title {
+    direction: rtl;
+    font-size: 5vh;
+    line-height: 10vh;
+    height:20vh;
+    text-align: center;
+}
+
+img#logo{
+    height:18vh;width:auto;
+    margin-top:1vh;
+    margin-right:10px;
+}
+
+.rightBar .number {
+  text-align: center;
+  font-size:13vh;
+  line-height: 16vh;
+  position: fixed;
+  left:0;top:20vh;height:16vh;width:28vw;
+  background-color:transparent; 
+  z-index: 20;
+  font-weight: bold;
+  color:var(--orange);
+  border-bottom: 1px solid var(--orange);
+}
+ 
+  
+  .rightBar .number.s2 {
+  top:36vh;
+}
+
+
+.rightBar .number.s3 {
+top:52vh;
+}
+
+
+.rightBar .number.s4 {
+  top:68vh;
+  }
+
+
+
+.rightBar .number.fs {
+    background-color: var(--orange);
+    color:#111;
+    top:20vh;
+    left:28vw;
+    width:72vw;
+    height:90vh;
+bottom:0;
+z-index: 20;
+line-height: 40vh;
+font-size: 30vh;
+}
+.rightBar .number span.g {display: block;text-align: center;line-height: 6vh;}
+.rightBar .number.fs span.g {font-size: 20vh; display: inline;}
+
+
+
+.rightBar .number:not(.fs) span.g {font-size: 7vh;position:absolute;background:var(--orange);color:white;line-height:16vh;min-width:6vw;top:0;bottom:0;width:auto;left:0;padding:0 10px;}
+.rightBar .number:not(.fs) span.g span {display: none;}
+.rightBar .number:not(.fs) {text-align:right;padding-right:10px}
+
+
+/*.rightBar .number:not(.fs).s2 span.g {background-color: orange;}
+.rightBar .number:not(.fs).s3 span.g {background-color: yellow;}
+.rightBar .number:not(.fs).s4 span.g {background-color: lime;}*/
+.rightBar .number.fs , .rightBar .number {
+    transition: all 1s ease-in-out;
+}
+
+
+.nmb {
+    font-family: "Share Tech Mono";
+}
+
+
+
+
+
+
+
+
+
+

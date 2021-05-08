@@ -2,8 +2,8 @@
 <ul>
 <li><a href="main.php">QMS SERVER</li>
 <li><a href="main.php"><i class="fa fa-home"></i></a></li>
-<li> <i class="fa fa-address-book"> </i></li>
-<li><a href="#"><i class="fa fa-plus"></i></a></li>
+<!--<li> <i class="fa fa-address-book"> </i></li>
+<li><a href="#"><i class="fa fa-plus"></i></a></li>-->
 </ul>
 <ul class="right">
 <li><i class="fa fa-user-circle"></i></li>

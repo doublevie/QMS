@@ -6,10 +6,10 @@ $data = Array('call' => Array());
 $live = new PDO('sqlite:data/queue.sqlite');
 $now = $now = date ('Y-m-d H:i:s');
 $live->beginTransaction();
-$result_one = $live->query("SELECT ECHO,GUI,ID FROM MAIN WHERE DONE='1' ");
+$result_one = $live->query("SELECT ECHO,GUI,ID,SERVICE FROM MAIN WHERE DONE='1' ");
 foreach($result_one as $row) {
   $id = $row['ID'];
- $data['call'][]  = array('nmb' => $row['ECHO'] , 'g' => $row['GUI']  );
+ $data['call'][]  = array('nmb' => $row['ECHO'] , 'g' => $row['GUI'] ,'si'=>$row['SERVICE']  );
   $live->exec("UPDATE MAIN SET DONE='$now' WHERE ID='$id'");
 }
 

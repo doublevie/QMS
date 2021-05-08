@@ -1,4 +1,6 @@
 <?php
+
+include 'inc/strings.php';
 $ini = parse_ini_file("conf/qms.ini");
 $header  = $ini["NOM_SOCIETE"];
 $Adresse = $ini["ADRESSE_SOCIETE"];
@@ -7,7 +9,7 @@ $printer = $ini["PRINTER"];
 
 setcookie("NOM_SOCIETE", $ini["NOM_SOCIETE"], time()+3600*24*7);
 setcookie("ADRESSE_SOCIETE", $ini["ADRESSE_SOCIETE"], time()+3600*24*7);
- setcookie("PRINTER", $ini["PRINTER"], time()+3600*24*7);
+setcookie("PRINTER", $ini["PRINTER"], time()+3600*24*7);
 
  ?>
 <!DOCTYPE html>
@@ -39,7 +41,7 @@ setcookie("ADRESSE_SOCIETE", $ini["ADRESSE_SOCIETE"], time()+3600*24*7);
 
 
 <div class="buttonDiv">
-<button type="button" name="button" class="btn btn-info btn-lg btn-block">Demande ticket</button>
+<button type="button" name="button" class="btn btn-info btn-lg btn-block"><?php print $str['demander_ticket'];?></button>
 </div>
   </head>
   <body>

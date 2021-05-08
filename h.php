@@ -1,4 +1,6 @@
-<?php  ?>
+<?php 
+include 'inc/strings.php';
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,7 +13,7 @@
 
 <div class="topInfos">
 
-<div class="soc">EURL FREQUECY</div>
+<div class="soc"></div>
 
 
 
@@ -69,7 +71,7 @@
 </div>
 <div class="col-xs-4 ">
   <div class="bottomTitle">
-TOTAL
+<?php print $str['total'] ; ?>
   </div>
 
   <div class="bottomBig countAll">
@@ -93,7 +95,7 @@ TOTAL
 
   </body>
 
-  <script src="https://cdn.ravenjs.com/3.17.0/raven.min.js" crossorigin="anonymous"></script>
+  <script src="app/raven.min.js" crossorigin="anonymous"></script>
 
   <script type="text/javascript" src="assets/js/frequency.min.js"></script>
   <script type="text/javascript" src="assets/js/ramjet.js"></script>
@@ -101,7 +103,7 @@ TOTAL
   <script type="text/javascript">
 qms.clock('.clock');
 qms.fullDate();
-Raven.config('https://4de3e45a9b8b43c4b5338e75ef75a797@sentry.io/193765').install()
+//Raven.config('https://4de3e45a9b8b43c4b5338e75ef75a797@sentry.io/193765').install()
 
   </script>
 </html>
